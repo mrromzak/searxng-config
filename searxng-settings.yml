@@ -1,0 +1,34 @@
+use_default_settings: true
+
+   server:
+     secret_key: "${SEARXNG_SECRET_KEY}"
+     base_url: "${SEARXNG_BASE_URL}"
+     limiter: false
+     image_proxy: false
+
+   search:
+     safe_search: 0
+     default_lang: "id-ID"
+     formats:
+       - html
+       - json
+
+   engines:
+     - name: brave
+       engine: brave
+       shortcut: br
+       disabled: false
+     - name: duckduckgo
+       engine: duckduckgo
+       shortcut: ddg
+       disabled: false
+     - name: mojeek
+       engine: mojeek
+       shortcut: mjk
+       disabled: false
+     - name: google
+       engine: google
+       disabled: true
+     - name: bing
+       engine: bing
+       disabled: true
